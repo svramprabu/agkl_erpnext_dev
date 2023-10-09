@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_auto_repeat": 1,
  "autoname": "field:task_name",
  "creation": "2023-10-09 12:53:19.158602",
  "default_view": "List",
@@ -9,13 +10,15 @@
  "field_order": [
   "task_name",
   "belongs_to",
-  "task_type",
   "expected_start_date",
   "expected_end_date",
   "duration_to_complete",
   "location",
   "materials_required",
-  "repeat_frequency"
+  "task_type",
+  "repeat_frequency",
+  "choose_days",
+  "task_status"
  ],
  "fields": [
   {
@@ -75,11 +78,25 @@
    "fieldtype": "Select",
    "label": "Repeat Frequency",
    "options": "Hourly\nDaily\nWeekly\nFortnightly\nMonthly\nQuarterly\nHalfyearly\nAnnually"
+  },
+  {
+   "default": "to be assigned",
+   "fieldname": "task_status",
+   "fieldtype": "Data",
+   "label": "Task Status",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.repeat_frequency==='Weekly';",
+   "fieldname": "choose_days",
+   "fieldtype": "Table",
+   "label": "Choose days",
+   "options": "Auto Repeat Day"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-09 15:19:05.521977",
+ "modified": "2023-10-09 20:01:55.105742",
  "modified_by": "Administrator",
  "module": "facility_management_module",
  "name": "task_queue",

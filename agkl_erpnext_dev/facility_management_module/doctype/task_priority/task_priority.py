@@ -4,5 +4,5 @@
 # import frappe
 from frappe.model.document import Document
 
-class facilitator_registration(Document):
+class task_priority(Document):
 	pass

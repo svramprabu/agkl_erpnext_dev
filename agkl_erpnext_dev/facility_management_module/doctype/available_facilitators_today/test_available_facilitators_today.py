@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class Testfacilitator_registration(FrappeTestCase):
+class Testavailable_facilitators_today(FrappeTestCase):
 	pass

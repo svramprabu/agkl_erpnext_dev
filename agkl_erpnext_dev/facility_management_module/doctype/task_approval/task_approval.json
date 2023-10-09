@@ -7,7 +7,16 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "task_name"
+  "task_name",
+  "task_priority",
+  "belongs_to",
+  "duration_required",
+  "location",
+  "repeat_frequency",
+  "task_type",
+  "expected_start_date",
+  "task_status",
+  "task_assigned_to"
  ],
  "fields": [
   {
@@ -15,11 +24,73 @@
    "fieldtype": "Link",
    "label": "Task name",
    "options": "task_queue"
+  },
+  {
+   "fetch_from": "task_name.task_status",
+   "fieldname": "task_status",
+   "fieldtype": "Select",
+   "label": "Task Status",
+   "options": "to be assigned\nApproved\nIn-Progress\nCompleted"
+  },
+  {
+   "fieldname": "task_priority",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Task priority",
+   "options": "task_priority",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "task_name.belongs_to",
+   "fieldname": "belongs_to",
+   "fieldtype": "Data",
+   "label": "Belongs to",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "task_name.duration_to_complete",
+   "fieldname": "duration_required",
+   "fieldtype": "Duration",
+   "label": "Duration required",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "task_name.location",
+   "fieldname": "location",
+   "fieldtype": "Autocomplete",
+   "label": "Location",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "task_name.repeat_frequency",
+   "fieldname": "repeat_frequency",
+   "fieldtype": "Autocomplete",
+   "label": "Repeat frequency",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "task_name.task_type",
+   "fieldname": "task_type",
+   "fieldtype": "Autocomplete",
+   "label": "Task type",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "task_name.expected_start_date",
+   "fieldname": "expected_start_date",
+   "fieldtype": "Autocomplete",
+   "label": "Expected start date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "task_assigned_to",
+   "fieldtype": "Data",
+   "label": "Task assigned to"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-09 15:23:02.804085",
+ "modified": "2023-10-09 20:05:35.902327",
  "modified_by": "Administrator",
  "module": "facility_management_module",
  "name": "task_approval",
