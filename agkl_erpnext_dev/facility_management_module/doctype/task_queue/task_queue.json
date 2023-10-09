@@ -1,0 +1,107 @@
+{
+ "actions": [],
+ "autoname": "field:task_name",
+ "creation": "2023-10-09 12:53:19.158602",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "task_name",
+  "belongs_to",
+  "task_type",
+  "expected_start_date",
+  "expected_end_date",
+  "duration_to_complete",
+  "location",
+  "materials_required",
+  "repeat_frequency"
+ ],
+ "fields": [
+  {
+   "fieldname": "task_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Task name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "belongs_to",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Belongs to",
+   "options": "facilities",
+   "reqd": 1
+  },
+  {
+   "fieldname": "task_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Task type",
+   "options": "task_type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "expected_start_date",
+   "fieldtype": "Date",
+   "label": "Expected Start date"
+  },
+  {
+   "fieldname": "expected_end_date",
+   "fieldtype": "Date",
+   "label": "Expected End date"
+  },
+  {
+   "fieldname": "duration_to_complete",
+   "fieldtype": "Duration",
+   "label": "Duration required"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Link",
+   "label": "Location",
+   "options": "agkl_locations"
+  },
+  {
+   "fieldname": "materials_required",
+   "fieldtype": "Table",
+   "label": "Materials Required",
+   "options": "materials_required"
+  },
+  {
+   "depends_on": "eval:doc.task_type== \"Repetitive task\"",
+   "fieldname": "repeat_frequency",
+   "fieldtype": "Select",
+   "label": "Repeat Frequency",
+   "options": "Hourly\nDaily\nWeekly\nFortnightly\nMonthly\nQuarterly\nHalfyearly\nAnnually"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-10-09 15:19:05.521977",
+ "modified_by": "Administrator",
+ "module": "facility_management_module",
+ "name": "task_queue",
+ "name_case": "Title Case",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

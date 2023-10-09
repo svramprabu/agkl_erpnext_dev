@@ -1,0 +1,84 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-10-09 15:48:24.101270",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "name1",
+  "contact_number",
+  "aadhar_number",
+  "working_under",
+  "food_requirement",
+  "location_of_work",
+  "accommodation"
+ ],
+ "fields": [
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "contact_number",
+   "fieldtype": "Data",
+   "label": "Contact number"
+  },
+  {
+   "fieldname": "aadhar_number",
+   "fieldtype": "Data",
+   "label": "Aadhar number"
+  },
+  {
+   "fieldname": "working_under",
+   "fieldtype": "Link",
+   "label": "Working under",
+   "options": "facilities"
+  },
+  {
+   "fieldname": "food_requirement",
+   "fieldtype": "Table MultiSelect",
+   "label": "Food requirement",
+   "options": "food_selector"
+  },
+  {
+   "fieldname": "location_of_work",
+   "fieldtype": "Link",
+   "label": "Location of work",
+   "options": "agkl_locations"
+  },
+  {
+   "default": "No",
+   "fieldname": "accommodation",
+   "fieldtype": "Select",
+   "label": "Accommodation ",
+   "options": "Yes\nNo"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-10-09 16:07:21.295646",
+ "modified_by": "Administrator",
+ "module": "facility_management_module",
+ "name": "facilitator_registration",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
