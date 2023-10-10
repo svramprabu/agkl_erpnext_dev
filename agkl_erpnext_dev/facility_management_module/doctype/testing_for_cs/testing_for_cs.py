@@ -7,5 +7,6 @@ from frappe.model.document import Document
 class testing_for_cs(Document):
 	def _validate(self):
 		# return super()._validate()
-		frappe.msgprint("Hi everyone")
+		frappe.msgprint(f"Hi everyone {self.test_data}")
+
 	# pass

@@ -7,18 +7,33 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "test_data"
+  "test_data",
+  "materials",
+  "task_belongs_to"
  ],
  "fields": [
   {
    "fieldname": "test_data",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "test data",
+   "options": "task_queue"
+  },
+  {
+   "fieldname": "materials",
+   "fieldtype": "Table",
+   "label": "materials",
+   "options": "materials_required"
+  },
+  {
+   "fieldname": "task_belongs_to",
    "fieldtype": "Data",
-   "label": "test data"
+   "label": "task belongs to "
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-10 09:12:42.527869",
+ "modified": "2023-10-10 13:14:36.552535",
  "modified_by": "Administrator",
  "module": "facility_management_module",
  "name": "testing_for_cs",
