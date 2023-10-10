@@ -9,7 +9,7 @@
  "field_order": [
   "task_name",
   "task_priority",
-  "belongs_to",
+  "working_department",
   "duration_required",
   "location",
   "repeat_frequency",
@@ -41,13 +41,6 @@
    "reqd": 1
   },
   {
-   "fetch_from": "task_name.belongs_to",
-   "fieldname": "belongs_to",
-   "fieldtype": "Data",
-   "label": "Belongs to",
-   "read_only": 1
-  },
-  {
    "fetch_from": "task_name.duration_to_complete",
    "fieldname": "duration_required",
    "fieldtype": "Duration",
@@ -56,29 +49,31 @@
   },
   {
    "fetch_from": "task_name.location",
+   "fetch_if_empty": 1,
    "fieldname": "location",
-   "fieldtype": "Autocomplete",
+   "fieldtype": "Link",
    "label": "Location",
-   "read_only": 1
+   "options": "agkl_locations"
   },
   {
    "fetch_from": "task_name.repeat_frequency",
    "fieldname": "repeat_frequency",
-   "fieldtype": "Autocomplete",
+   "fieldtype": "Data",
    "label": "Repeat frequency",
    "read_only": 1
   },
   {
    "fetch_from": "task_name.task_type",
+   "fetch_if_empty": 1,
    "fieldname": "task_type",
-   "fieldtype": "Autocomplete",
+   "fieldtype": "Link",
    "label": "Task type",
-   "read_only": 1
+   "options": "task_type"
   },
   {
    "fetch_from": "task_name.expected_start_date",
    "fieldname": "expected_start_date",
-   "fieldtype": "Autocomplete",
+   "fieldtype": "Date",
    "label": "Expected start date",
    "read_only": 1
   },
@@ -87,11 +82,19 @@
    "fieldtype": "Table MultiSelect",
    "label": "Task assigned to",
    "options": "available_facilitators"
+  },
+  {
+   "fetch_from": "task_name.belongs_to",
+   "fetch_if_empty": 1,
+   "fieldname": "working_department",
+   "fieldtype": "Link",
+   "label": "Working department",
+   "options": "facilities"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-10 09:02:22.280706",
+ "modified": "2023-10-10 19:36:03.760122",
  "modified_by": "Administrator",
  "module": "facility_management_module",
  "name": "task_approval",
