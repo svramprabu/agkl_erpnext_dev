@@ -3,10 +3,24 @@
 
 frappe.ui.form.on('testing_for_cs', {
 	// refresh: function(frm) {
-	refresh: function(frm)
-	{
-		frm.add_custom_button('button1',{},'button')
-		frm.add_custom_button('button2',{},'button')
-	}
+	// refresh: function(frm)
+	// {
+	// 	frm.add_custom_button('button1',{},'button')
+	// 	frm.add_custom_button('button2',{},'button')
 	// }
-});
+	// }
+	// enable: function(frm) {
+	// 	frm.call({
+	// 		doc: frm.doc,
+	// 		method: 'frm_call',
+	// 		args:{
+	// 			msg: " hi"
+	// 		} ,
+	// 		freeze: True,
+	// 		freeze_message: __('On a bg process'),
+	// 		callback: function(r){
+	// 			frappe.msgprint(r.message)
+	// 		}
+	// 	});
+	// }
+	});

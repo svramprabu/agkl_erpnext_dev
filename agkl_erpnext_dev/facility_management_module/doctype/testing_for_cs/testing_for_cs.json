@@ -9,7 +9,8 @@
  "field_order": [
   "test_data",
   "materials",
-  "task_belongs_to"
+  "task_belongs_to",
+  "enable"
  ],
  "fields": [
   {
@@ -26,14 +27,21 @@
    "options": "materials_required"
   },
   {
+   "fetch_from": "test_data.belongs_to",
    "fieldname": "task_belongs_to",
    "fieldtype": "Data",
    "label": "task belongs to "
+  },
+  {
+   "default": "0",
+   "fieldname": "enable",
+   "fieldtype": "Check",
+   "label": "Enable"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-10 13:14:36.552535",
+ "modified": "2023-10-10 18:07:57.298608",
  "modified_by": "Administrator",
  "module": "facility_management_module",
  "name": "testing_for_cs",
@@ -52,7 +60,6 @@
    "write": 1
   }
  ],
- "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
