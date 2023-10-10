@@ -84,13 +84,14 @@
   },
   {
    "fieldname": "task_assigned_to",
-   "fieldtype": "Data",
-   "label": "Task assigned to"
+   "fieldtype": "Table MultiSelect",
+   "label": "Task assigned to",
+   "options": "available_facilitators"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-09 20:05:35.902327",
+ "modified": "2023-10-10 09:02:22.280706",
  "modified_by": "Administrator",
  "module": "facility_management_module",
  "name": "task_approval",
@@ -109,7 +110,6 @@
    "write": 1
   }
  ],
- "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],

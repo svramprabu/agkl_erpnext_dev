@@ -1,14 +1,13 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "naming_series:",
+ "autoname": "format:WRKR-{name_of_the_worker}-{####}",
  "creation": "2023-10-09 15:48:24.101270",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "naming_series",
   "name_of_the_worker",
   "worker_photo",
   "contact_number",
@@ -34,7 +33,8 @@
    "label": "Aadhar number",
    "length": 12,
    "reqd": 1,
-   "set_only_once": 1
+   "set_only_once": 1,
+   "unique": 1
   },
   {
    "fieldname": "working_under",
@@ -80,22 +80,15 @@
    "label": "Worker Photo",
    "reqd": 1,
    "set_only_once": 1
-  },
-  {
-   "fieldname": "naming_series",
-   "fieldtype": "Select",
-   "label": "Worker ID",
-   "options": "WRKR-.#####",
-   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-09 21:21:14.452458",
+ "modified": "2023-10-10 10:18:27.809916",
  "modified_by": "Administrator",
  "module": "facility_management_module",
  "name": "facilitators_list",
- "naming_rule": "By \"Naming Series\" field",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -113,5 +106,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1
 }
