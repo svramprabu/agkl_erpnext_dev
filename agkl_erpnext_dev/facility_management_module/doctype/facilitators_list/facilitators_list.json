@@ -8,14 +8,22 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "facilitator_or_fabricator",
+  "personnel_details",
   "name_of_the_worker",
   "worker_photo",
   "contact_number",
   "aadhar_number",
+  "section_break_jfxd7",
+  "department_and_location_details",
   "working_under",
-  "food_requirement",
   "location_of_work",
-  "accommodation"
+  "section_break_wdzmw",
+  "amenities_request",
+  "food_request",
+  "accommodation_request",
+  "power_request",
+  "transport_request"
  ],
  "fields": [
   {
@@ -46,24 +54,11 @@
    "reqd": 1
   },
   {
-   "fieldname": "food_requirement",
-   "fieldtype": "Table MultiSelect",
-   "label": "Food requirement",
-   "options": "food_selector"
-  },
-  {
    "fieldname": "location_of_work",
    "fieldtype": "Link",
    "label": "Location of work",
    "options": "agkl_locations",
    "reqd": 1
-  },
-  {
-   "default": "No",
-   "fieldname": "accommodation",
-   "fieldtype": "Link",
-   "label": "Accommodation ",
-   "options": "accommodation_preference"
   },
   {
    "fieldname": "name_of_the_worker",
@@ -80,11 +75,69 @@
    "label": "Worker Photo",
    "reqd": 1,
    "set_only_once": 1
+  },
+  {
+   "depends_on": "eval:doc.facilitator_or_fabricator==\"Fabricator\";",
+   "fieldname": "power_request",
+   "fieldtype": "Table",
+   "label": "Power request",
+   "options": "power_request"
+  },
+  {
+   "fieldname": "food_request",
+   "fieldtype": "Table MultiSelect",
+   "label": "Food request",
+   "options": "food_selector"
+  },
+  {
+   "default": "No",
+   "depends_on": "eval:doc.facilitator_or_fabricator==\"Fabricator\";",
+   "fieldname": "accommodation_request",
+   "fieldtype": "Link",
+   "label": "Accommodation request",
+   "options": "accommodation_preference"
+  },
+  {
+   "default": "No",
+   "fieldname": "transport_request",
+   "fieldtype": "Select",
+   "label": "Transport request",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "personnel_details",
+   "fieldtype": "Heading",
+   "label": "Personnel Details"
+  },
+  {
+   "fieldname": "section_break_jfxd7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_wdzmw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "department_and_location_details",
+   "fieldtype": "Heading",
+   "label": "Department and Location details"
+  },
+  {
+   "fieldname": "amenities_request",
+   "fieldtype": "Heading",
+   "label": "Amenities request"
+  },
+  {
+   "fieldname": "facilitator_or_fabricator",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Facilitator or Fabricator",
+   "options": "Facilitator\nFabricator"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-10 19:23:57.286597",
+ "modified": "2023-10-11 19:00:42.047708",
  "modified_by": "Administrator",
  "module": "facility_management_module",
  "name": "facilitators_list",

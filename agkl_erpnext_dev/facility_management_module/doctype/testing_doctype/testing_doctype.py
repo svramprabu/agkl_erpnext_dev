@@ -6,7 +6,14 @@ from frappe.model.document import Document
 
 class testing_doctype(Document):
 
-	# def validate(self):
+	def validate(self):
+		self.get_doc_item()
+
+	def get_doc_item(self):
+		doc = frappe.get_doc('task_queue',self.test_data)
+		for each_mat in doc.get("materials_required"):
+			frappe.msgprint(f"Need {each_mat.name_of_the_material} in {each_mat.quantity}")
+	
 	# 	frappe.msgprint("Hiiiii")
         # frappe.msgprint("Hi from server side")
 
@@ -17,4 +24,5 @@ class testing_doctype(Document):
 		# 	# frappe.msgprint(f"Hi everyone {self.test_data}")
 		# 	return "Work done"		
 
-		pass
+		# pass
+		

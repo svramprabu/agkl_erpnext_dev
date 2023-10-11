@@ -9,7 +9,7 @@
  "engine": "InnoDB",
  "field_order": [
   "task_name",
-  "belongs_to",
+  "working_department",
   "expected_start_date",
   "expected_end_date",
   "duration_to_complete",
@@ -28,14 +28,6 @@
    "label": "Task name",
    "reqd": 1,
    "unique": 1
-  },
-  {
-   "fieldname": "belongs_to",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Belongs to",
-   "options": "facilities",
-   "reqd": 1
   },
   {
    "fieldname": "task_type",
@@ -92,11 +84,19 @@
    "fieldtype": "Table",
    "label": "Choose days",
    "options": "Auto Repeat Day"
+  },
+  {
+   "fieldname": "working_department",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Working department",
+   "options": "facilities",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-09 20:01:55.105742",
+ "modified": "2023-10-11 18:24:28.258918",
  "modified_by": "Administrator",
  "module": "facility_management_module",
  "name": "task_queue",

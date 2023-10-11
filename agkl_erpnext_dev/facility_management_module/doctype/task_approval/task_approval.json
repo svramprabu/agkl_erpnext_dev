@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:{task_name}_{DD_MM_YYYY}_{###}",
  "creation": "2023-10-09 14:52:01.661475",
  "default_view": "List",
  "doctype": "DocType",
@@ -10,11 +11,12 @@
   "task_name",
   "task_priority",
   "working_department",
+  "expected_start_date",
   "duration_required",
   "location",
-  "repeat_frequency",
+  "materials_required",
   "task_type",
-  "expected_start_date",
+  "repeat_frequency",
   "task_status",
   "task_assigned_to"
  ],
@@ -22,17 +24,19 @@
   {
    "fieldname": "task_name",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Task name",
    "options": "task_queue"
   },
   {
-   "fetch_from": "task_name.task_status",
+   "default": "to be assigned",
    "fieldname": "task_status",
    "fieldtype": "Select",
    "label": "Task Status",
    "options": "to be assigned\nApproved\nIn-Progress\nCompleted"
   },
   {
+   "default": "Low",
    "fieldname": "task_priority",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -84,7 +88,14 @@
    "options": "available_facilitators"
   },
   {
-   "fetch_from": "task_name.belongs_to",
+   "fieldname": "materials_required",
+   "fieldtype": "Table",
+   "label": "Materials required",
+   "options": "materials_required",
+   "set_only_once": 1
+  },
+  {
+   "fetch_from": "task_name.working_department",
    "fetch_if_empty": 1,
    "fieldname": "working_department",
    "fieldtype": "Link",
@@ -94,10 +105,11 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-10 19:36:03.760122",
+ "modified": "2023-10-11 18:27:23.218862",
  "modified_by": "Administrator",
  "module": "facility_management_module",
  "name": "task_approval",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

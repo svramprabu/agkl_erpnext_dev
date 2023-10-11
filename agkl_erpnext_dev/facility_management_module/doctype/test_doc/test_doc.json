@@ -1,27 +1,30 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2023-10-10 09:12:42.527869",
+ "autoname": "field:incoming_data",
+ "creation": "2023-10-11 16:36:10.449595",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "input_data"
+  "incoming_data"
  ],
  "fields": [
   {
-   "fieldname": "input_data",
+   "fieldname": "incoming_data",
    "fieldtype": "Data",
-   "label": "input data"
+   "label": "incoming data",
+   "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-11 16:27:59.810691",
+ "modified": "2023-10-11 16:36:10.449595",
  "modified_by": "Administrator",
  "module": "facility_management_module",
- "name": "testing_doctype",
+ "name": "test_doc",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

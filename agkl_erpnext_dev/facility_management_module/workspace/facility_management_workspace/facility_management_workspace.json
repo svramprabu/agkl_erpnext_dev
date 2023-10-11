@@ -12,7 +12,7 @@
  "is_hidden": 0,
  "label": "Facility Management Workspace",
  "links": [],
- "modified": "2023-10-11 09:39:42.714842",
+ "modified": "2023-10-11 18:46:50.263076",
  "modified_by": "Administrator",
  "module": "facility_management_module",
  "name": "Facility Management Workspace",
@@ -49,15 +49,6 @@
  "sequence_id": 1.0,
  "shortcuts": [
   {
-   "color": "Yellow",
-   "doc_view": "List",
-   "format": "{} unassigned tasks",
-   "label": "Security tasks to be assigned",
-   "link_to": "task_queue",
-   "stats_filter": "{\"belongs_to\":[\"=\",\"Security\"]}",
-   "type": "DocType"
-  },
-  {
    "color": "Grey",
    "doc_view": "New",
    "label": "click to raise request for a new task",
@@ -71,6 +62,15 @@
    "label": "facility management module's doctypes",
    "link_to": "DocType",
    "stats_filter": "{\"module\":[\"=\",\"facility_management_module\"]}",
+   "type": "DocType"
+  },
+  {
+   "color": "Yellow",
+   "doc_view": "List",
+   "format": "{} unassigned tasks",
+   "label": "Housekeeping Tasks to be assigned",
+   "link_to": "task_queue",
+   "stats_filter": "{\"working_department\":[\"=\",\"House Keeping\"]}",
    "type": "DocType"
   },
   {
@@ -91,9 +91,9 @@
    "color": "Yellow",
    "doc_view": "List",
    "format": "{} unassigned tasks",
-   "label": "Housekeeping Tasks to be assigned",
+   "label": "Security tasks to be assigned",
    "link_to": "task_queue",
-   "stats_filter": "{\"belongs_to\":[\"=\",\"House Keeping\"]}",
+   "stats_filter": "{\"working_department\":[\"=\",\"Security\"]}",
    "type": "DocType"
   },
   {
@@ -102,7 +102,7 @@
    "format": "{} unassigned tasks",
    "label": "Painters task to be assigned",
    "link_to": "task_queue",
-   "stats_filter": "{\"belongs_to\":[\"=\",\"Painter\"]}",
+   "stats_filter": "{\"working_department\":[\"=\",\"Painter\"]}",
    "type": "DocType"
   }
  ],
