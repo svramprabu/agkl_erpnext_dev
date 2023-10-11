@@ -1,7 +1,14 @@
 // Copyright (c) 2023, svr and contributors
 // For license information, please see license.txt
 
-frappe.ui.form.on('testing_doctype', {
+// frappe.ui.form.on('testing_doctype', {
+frappe.ui.form.on("testing_doctype", {
+	// 	refresh: function(frm){
+	// 	frm.add_custom_button("Link", function(){
+	// 			var myWin = window.open('https://qrcodescan.in');
+	// 	});
+	// }
+});
 	// refresh: function(frm) {
 	// refresh: function(frm)
 	// {
@@ -23,4 +30,4 @@ frappe.ui.form.on('testing_doctype', {
 	// 		}
 	// 	});
 	// }
-	});
+	// });
