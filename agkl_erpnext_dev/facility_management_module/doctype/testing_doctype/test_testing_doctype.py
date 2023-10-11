@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class Testtesting_for_cs(FrappeTestCase):
+class Testtesting_doctype(FrappeTestCase):
 	pass

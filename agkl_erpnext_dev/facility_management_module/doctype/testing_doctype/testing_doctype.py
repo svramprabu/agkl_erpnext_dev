@@ -4,7 +4,7 @@
 import frappe
 from frappe.model.document import Document
 
-class testing_for_cs(Document):
+class testing_doctype(Document):
 
 	# def validate(self):
 	# 	frappe.msgprint("Hiiiii")
