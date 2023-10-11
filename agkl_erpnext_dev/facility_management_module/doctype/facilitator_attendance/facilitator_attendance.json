@@ -8,6 +8,8 @@
  "engine": "InnoDB",
  "field_order": [
   "facilitator_name",
+  "profile_photo",
+  "display_picture",
   "work_location",
   "working_department",
   "accommodation"
@@ -35,17 +37,32 @@
    "options": "facilities"
   },
   {
-   "fetch_from": "facilitator_name.accommodation",
+   "fetch_from": "facilitator_name.accommodation_request",
    "fetch_if_empty": 1,
    "fieldname": "accommodation",
    "fieldtype": "Link",
    "label": "Accommodation",
    "options": "accommodation_preference"
+  },
+  {
+   "fetch_from": "facilitator_name.worker_photo",
+   "fetch_if_empty": 1,
+   "fieldname": "profile_photo",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "Profile Photo"
+  },
+  {
+   "fieldname": "display_picture",
+   "fieldtype": "Image",
+   "label": "Display picture",
+   "mandatory_depends_on": "profile_photo",
+   "options": "profile_photo"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-11 18:10:40.072316",
+ "modified": "2023-10-11 21:32:49.597560",
  "modified_by": "Administrator",
  "module": "facility_management_module",
  "name": "facilitator_attendance",
