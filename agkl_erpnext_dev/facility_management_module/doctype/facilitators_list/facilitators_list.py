@@ -7,5 +7,5 @@ from frappe.model.document import Document
 class facilitators_list(Document):
 	def validate(self):
 		# frappe.msgprint(f"{self.name}")
-		self.qr_generator = f"https://api.qrserver.com/v1/create-qr-code/?size=250x250&data={self.name}"
+		self.qr_generator = f"https://api.qrserver.com/v1/create-qr-code/?size=500x500&data={self.name}"
 	# pass
