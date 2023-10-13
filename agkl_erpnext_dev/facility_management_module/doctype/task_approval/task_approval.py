@@ -15,13 +15,17 @@ class task_approval(Document):
 		# i=1
 		
 		frappe.msgprint(f"{self.get('materials_required')[0]}")
+		self.set("materials_required", [])
+		child_index = 0
 		for each in doc.get("materials_required"):
 			self.append("materials_required",{
 			# "No.":f"{i}",
+			"idx":f"{child_index}",
 			"name_of_the_material":f"{each.name_of_the_material}",
 			"quantity":f"{each.quantity}",
 			"units" : f"{each.units}"
 			})
+			child_index+=1
 			# i+=1
 
 	

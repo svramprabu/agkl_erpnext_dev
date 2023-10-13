@@ -7,6 +7,8 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "qr_scan",
+  "decode_qr",
   "facilitator_name",
   "profile_photo",
   "display_picture",
@@ -58,11 +60,22 @@
    "label": "Display picture",
    "mandatory_depends_on": "profile_photo",
    "options": "profile_photo"
+  },
+  {
+   "fieldname": "qr_scan",
+   "fieldtype": "Attach Image",
+   "label": "Scan and upload QR"
+  },
+  {
+   "default": "0",
+   "fieldname": "decode_qr",
+   "fieldtype": "Check",
+   "label": "decode_qr"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-11 21:32:49.597560",
+ "modified": "2023-10-13 16:32:32.801979",
  "modified_by": "Administrator",
  "module": "facility_management_module",
  "name": "facilitator_attendance",
