@@ -1,13 +1,15 @@
 {
+ "_user_tags": ",master",
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:facility_name",
+ "autoname": "field:facility_code",
  "creation": "2023-10-09 12:35:13.755420",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "facility_name"
+  "facility_name",
+  "facility_code"
  ],
  "fields": [
   {
@@ -18,11 +20,19 @@
    "label": "Name of the facility",
    "reqd": 1,
    "unique": 1
+  },
+  {
+   "fieldname": "facility_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Facility Code",
+   "reqd": 1,
+   "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-09 13:18:03.377475",
+ "modified": "2023-10-12 14:11:58.432585",
  "modified_by": "Administrator",
  "module": "facility_management_module",
  "name": "facilities",
@@ -43,6 +53,7 @@
   }
  ],
  "quick_entry": 1,
+ "search_fields": "facility_name",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],

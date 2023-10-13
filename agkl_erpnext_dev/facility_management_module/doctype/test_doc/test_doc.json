@@ -1,14 +1,15 @@
 {
  "actions": [],
- "allow_rename": 1,
- "autoname": "field:incoming_data",
+ "autoname": "autoincrement",
  "creation": "2023-10-11 16:36:10.449595",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "incoming_data"
+  "enable",
+  "incoming_data",
+  "tester_data"
  ],
  "fields": [
   {
@@ -16,15 +17,26 @@
    "fieldtype": "Data",
    "label": "incoming data",
    "unique": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "enable",
+   "fieldtype": "Check",
+   "label": "Enable"
+  },
+  {
+   "fieldname": "tester_data",
+   "fieldtype": "Data",
+   "label": "tester data"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-11 16:36:10.449595",
+ "modified": "2023-10-12 17:33:51.310857",
  "modified_by": "Administrator",
  "module": "facility_management_module",
  "name": "test_doc",
- "naming_rule": "By fieldname",
+ "naming_rule": "Autoincrement",
  "owner": "Administrator",
  "permissions": [
   {

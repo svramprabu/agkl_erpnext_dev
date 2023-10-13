@@ -1,4 +1,5 @@
 {
+ "_user_tags": ",master",
  "actions": [],
  "allow_rename": 1,
  "autoname": "field:name_of_the_location",
@@ -8,7 +9,8 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "name_of_the_location"
+  "name_of_the_location",
+  "location_address"
  ],
  "fields": [
   {
@@ -18,11 +20,16 @@
    "label": "Name of the Location",
    "reqd": 1,
    "unique": 1
+  },
+  {
+   "fieldname": "location_address",
+   "fieldtype": "Small Text",
+   "label": "Location address"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-09 13:30:44.207047",
+ "modified": "2023-10-12 13:50:46.429468",
  "modified_by": "Administrator",
  "module": "facility_management_module",
  "name": "agkl_locations",
@@ -44,6 +51,7 @@
   }
  ],
  "quick_entry": 1,
+ "search_fields": "location_address",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []
