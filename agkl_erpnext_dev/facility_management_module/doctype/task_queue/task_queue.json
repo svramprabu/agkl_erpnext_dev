@@ -121,6 +121,7 @@
    "allow_in_quick_entry": 1,
    "fieldname": "task_description",
    "fieldtype": "Text",
+   "in_list_view": 1,
    "label": "Describe the task in detail",
    "reqd": 1
   },
@@ -164,7 +165,7 @@
  "image_field": "task_pic",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-13 13:13:40.760784",
+ "modified": "2023-10-14 14:25:27.630131",
  "modified_by": "Administrator",
  "module": "facility_management_module",
  "name": "task_queue",
