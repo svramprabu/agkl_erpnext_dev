@@ -32,7 +32,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-10-13 16:29:41.157135",
+ "modified": "2023-10-14 18:08:00.845069",
  "modified_by": "Administrator",
  "module": "facility_management_module",
  "name": "available_facilitators",
@@ -40,6 +40,5 @@
  "permissions": [],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
- "track_changes": 1
+ "states": []
 }

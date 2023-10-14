@@ -165,7 +165,7 @@
  "image_field": "task_pic",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-14 14:25:27.630131",
+ "modified": "2023-10-14 18:07:58.066365",
  "modified_by": "Administrator",
  "module": "facility_management_module",
  "name": "task_queue",
@@ -190,6 +190,5 @@
  "search_fields": "task_description",
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
- "track_changes": 1
+ "states": []
 }

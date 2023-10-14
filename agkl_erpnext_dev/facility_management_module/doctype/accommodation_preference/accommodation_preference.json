@@ -1,4 +1,5 @@
 {
+ "_user_tags": ",master",
  "actions": [],
  "allow_rename": 1,
  "autoname": "field:accommodation_preference",
@@ -20,7 +21,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-10 18:54:28.315121",
+ "modified": "2023-10-14 18:08:02.270779",
  "modified_by": "Administrator",
  "module": "facility_management_module",
  "name": "accommodation_preference",
@@ -43,6 +44,5 @@
  "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
- "track_changes": 1
+ "states": []
 }

@@ -32,7 +32,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-12 14:11:58.432585",
+ "modified": "2023-10-14 18:08:01.512561",
  "modified_by": "Administrator",
  "module": "facility_management_module",
  "name": "facilities",
@@ -56,6 +56,5 @@
  "search_fields": "facility_name",
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
- "track_changes": 1
+ "states": []
 }

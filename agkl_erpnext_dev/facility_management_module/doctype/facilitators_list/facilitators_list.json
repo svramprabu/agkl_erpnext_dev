@@ -160,7 +160,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-12 13:14:51.708724",
+ "modified": "2023-10-14 18:07:59.506419",
  "modified_by": "Administrator",
  "module": "facility_management_module",
  "name": "facilitators_list",
@@ -183,6 +183,5 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
- "track_changes": 1
+ "states": []
 }
