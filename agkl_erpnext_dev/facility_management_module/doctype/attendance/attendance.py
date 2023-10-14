@@ -6,7 +6,7 @@ from frappe.model.document import Document
 import cv2
 from pyzbar.pyzbar import decode
 
-class testing_doctype(Document):
+class attendance(Document):
 	# pass
 	@frappe.whitelist()
 	def frm_call(self):
@@ -20,7 +20,7 @@ class testing_doctype(Document):
 
 				qr_code_detected = True
 			cv2.waitKey(1)
-		frappe.msgprint(qr_data)
+		self.houskeep_id = qr_data
 		
 		cam.release()
 		cv2.destroyAllWindows()
