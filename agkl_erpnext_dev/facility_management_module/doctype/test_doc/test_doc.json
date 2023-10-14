@@ -7,32 +7,32 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "enable",
-  "incoming_data",
-  "tester_data"
+  "route_id",
+  "show_points",
+  "pick_up_points"
  ],
  "fields": [
   {
-   "fieldname": "incoming_data",
-   "fieldtype": "Data",
-   "label": "incoming data",
-   "unique": 1
+   "fieldname": "route_id",
+   "fieldtype": "Select",
+   "label": "Route ID",
+   "options": "Route 1\nRoute 2"
   },
   {
    "default": "0",
-   "fieldname": "enable",
+   "fieldname": "show_points",
    "fieldtype": "Check",
-   "label": "Enable"
+   "label": "Show pick up points"
   },
   {
-   "fieldname": "tester_data",
-   "fieldtype": "Data",
-   "label": "tester data"
+   "fieldname": "pick_up_points",
+   "fieldtype": "Select",
+   "label": "Pick up points"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-12 17:33:51.310857",
+ "modified": "2023-10-13 13:41:49.455260",
  "modified_by": "Administrator",
  "module": "facility_management_module",
  "name": "test_doc",
