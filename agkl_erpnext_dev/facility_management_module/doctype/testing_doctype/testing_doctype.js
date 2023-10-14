@@ -8,7 +8,7 @@ frappe.ui.form.on("testing_doctype", {
 	// 			var myWin = window.open('https://qrcodescan.in');
 	// 	});
 	// }
-});
+// });
 	// refresh: function(frm) {
 	// refresh: function(frm)
 	// {
@@ -16,18 +16,18 @@ frappe.ui.form.on("testing_doctype", {
 	// 	frm.add_custom_button('button2',{},'button')
 	// }
 	// }
-	// enable: function(frm) {
-	// 	frm.call({
-	// 		doc: frm.doc,
-	// 		method: 'frm_call',
-	// 		args:{
-	// 			msg: " hi"
-	// 		} ,
-	// 		freeze: True,
-	// 		freeze_message: __('On a bg process'),
-	// 		callback: function(r){
-	// 			frappe.msgprint(r.message)
-	// 		}
-	// 	});
-	// }
-	// });
+	onload: function(frm) {
+		frm.call({
+			doc: frm.doc,
+			method: 'frm_call',
+			// args:{
+			// 	msg: " hi"
+			// } ,
+			// freeze: True,
+			// freeze_message: __('On a bg process'),
+			// callback: function(r){
+				// frappe.msgprint(r.message)
+			// }
+		});
+	}
+	});
